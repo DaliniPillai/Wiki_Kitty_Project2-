@@ -10,6 +10,6 @@ CREATE TABLE IF NOT EXISTS breed (
   id BIGSERIAL PRIMARY KEY,
   breed_name VARCHAR(255),
   img_url VARCHAR(255),
-  character_id INTEGER REFERENCES characteristic(id)
+  characteristic_id INTEGER REFERENCES characteristic(id)
 );
 
