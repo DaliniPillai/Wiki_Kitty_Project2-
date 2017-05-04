@@ -1,4 +1,4 @@
-INSERT INTO breed (breed_name, img_url,characteristic_id) VALUES
+INSERT INTO breed (breed_name, img_url, character_id) VALUES
   (
     'Abyssinian',
     'https://pixabay.com/get/eb34b20920f4023ed1584d05fb0938c9bd22ffd41db8124996f7c27ea1/kittens-2136803_1280.jpg',
