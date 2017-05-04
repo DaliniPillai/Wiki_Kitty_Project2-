@@ -1,0 +1,22 @@
+<% include ../partials/boilerplate %>
+
+<a href='/kitty/add'>Add a Kitty!</a>
+
+<div class='kittyFirst'>
+  <% kittyData.forEach(function(kitty) { %>
+    <div class='kittyBreed'>
+      <h3><%= kitty.breed_name %></h3>
+      <div class='meta'>
+        <span class='img'><%= kitty.img_url %></span>
+        <span class='character'><%= kitty.character_id %></span>
+      </div>
+      <a href='/kitty/<%= kitty.id %>'>Go to page</a>
+      <a href='/kitty/edit/<%= kitty.id %>'>Edit Kitty</a>
+      <form method='POST' action='/kitty/<%= kitty.id %>?_method=DELETE'>
+        <input type='submit' value='Delete your kitty :(' />
+      </form>
+    </div>
+  <% }) %>
+</div>
+
+<% include ../partials/end %>

@@ -1,0 +1,15 @@
+<% include ./partials/boilerplate.ejs %>
+
+<div class='hero'>
+  <h1><%= message %></h1>
+  <h3><%= subTitle %></h3>
+</div>
+
+<% if (showMore === true) { %>
+<div class='more'>
+<p>Find Your Meow!</p>
+</div>
+<% } %>
+
+<a href='/kitty'>Browse</a>
+<% include ./partials/end.ejs %>
