@@ -3,41 +3,42 @@ const db = require('../db/config');
 const Kitty = {};
 
 Kitty.findAll = () => {
-  return db.query('SELECT * FROM kitty ORDER BY id ASC');
+  return db.query('SELECT * FROM breed ORDER BY id ASC');
 };
 
 Kitty.findById = id => {
-  return db.oneOrNone('SELECT * FROM kitty WHERE id = $1', [id]);
+  return db.oneOrNone('SELECT * FROM breed WHERE id = $1', [id]);
 };
 
 Kitty.create = kitty => {
+  console.log(kitty);
   return db.one(
     `
-      INSERT INTO kitty
-      (breed_name, img_url, character_id)
+      INSERT INTO breed
+      (breed_name, img_url, characteristic_id)
       VALUES ($1, $2, $3) RETURNING *
     `,
-    [kitty.breed_name, kitty.img_url, kitty.character_id]
+    [kitty.breed_name, kitty.img_url, kitty.characteristic_id]
   );
 };
 
 Kitty.update = (kitty, id) => {
   return db.none(
     `
-      UPDATE kitty SET
+      UPDATE breed SET
       breed_name = $1,
       img_url = $2,
-      character_id = $3
+      characteristic_id = $3
       WHERE id = $4
     `,
-    [kitty.breed_name, kitty.img_url, kitty.character_id, id]
+    [kitty.breed_name, kitty.img_url, kitty.characteristic_id, id]
   );
 };
 
 Kitty.destroy = id => {
   return db.none(
     `
-      DELETE FROM kitty
+      DELETE FROM breed
       WHERE id = $1
     `,
     [id]

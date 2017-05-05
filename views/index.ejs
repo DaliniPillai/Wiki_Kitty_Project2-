@@ -1,15 +1,21 @@
 <% include ./partials/boilerplate.ejs %>
-
+<div class='kittyLogo'>
+<img src='../static/images/wikiKitty.png' alt='kitty logo'>
+</div>
 <div class='hero'>
-  <h1><%= message %></h1>
   <h3><%= subTitle %></h3>
 </div>
 
 <% if (showMore === true) { %>
 <div class='more'>
-<p>Find Your Meow!</p>
+<div class='divOne'>
+<a href='/kitty'>Browse</a> <br>
+</div>
+<div class='divTwo'>
+<a href='/kitty/Add'>Add a kitty!</a>
+</div>
 </div>
 <% } %>
 
-<a href='/kitty'>Browse</a>
+
 <% include ./partials/end.ejs %>

@@ -18,6 +18,7 @@ controller.index = (req, res) => {
 controller.show = (req, res) => {
   Kitty.findById(req.params.id)
   .then(kitty => {
+    console.log(kitty);
     res.render('kitty/kitty-single', {
       documentTitle: 'Wiki Kitty',
       kitty: kitty,
@@ -29,10 +30,11 @@ controller.show = (req, res) => {
 };
 
 controller.create = (req, res) => {
+  console.log(req.body);
   Kitty.create({
     breed_name: req.body.breed_name,
     img_url: req.body.img_url,
-    character_id: req.body.character_id,
+    characteristic_id: req.body.characteristic_id,
   })
   .then(kitty => {
     res.redirect('/kitty');
@@ -61,7 +63,7 @@ controller.update = (req, res) => {
   Kitty.update({
     breed_name: req.body.breed_name,
     img_url: req.body.img_url,
-    character_id: req.body.character_id,
+    characteristic_id: req.body.characteristic_id,
   }, req.params.id)
   .then(kitty => {
     res.redirect('/kitty');
@@ -72,7 +74,7 @@ controller.update = (req, res) => {
 };
 
 controller.destroy = (req, res) => {
-  Kitty.destrooy(req.params.id)
+  Kitty.destroy(req.params.id)
   .then(() =>{
     res.redirect('/kitty');
   })
