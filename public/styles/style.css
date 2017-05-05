@@ -57,6 +57,11 @@ h3 {
 a:hover {
   background: rgba(240,90,93,0.87);
 }
+.catImages  {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
 
 
 
@@ -67,6 +72,14 @@ a:hover {
 h1 {
   text-align: center;
   font-size: 70px;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
 }
 .divOne, .divTwo {
   width: 25%;

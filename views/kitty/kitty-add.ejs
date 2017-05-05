@@ -3,8 +3,15 @@
 <form method='POST' action='/kitty'>
   <input name='breed_name' type='text' placeholder='Breed Name' />
   <input name='img_url' type='text' placeholder='Image url' />
-  <input name='characteristic_id' type='text' placeholder='Characteristics' />
-  <input type='submit' value='Add A kitty' />
+ 
+  <select name='characteristic_id'>
+    <option value='1'>Affectionate</option>
+    <option value='2'>Energetic</option>
+    <option value='3'>Intelligent</option>
+    <option value='4'>Child Friendly</option>
+  </select>
+
+  <input type='submit' value='Add a kitty!' />
 </form>
 
 <% include ../partials/end %>

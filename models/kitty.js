@@ -3,7 +3,12 @@ const db = require('../db/config');
 const Kitty = {};
 
 Kitty.findAll = () => {
-  return db.query('SELECT * FROM breed ORDER BY id ASC');
+  return db.query(
+    `SELECT breed.id, breed_name, img_url, character_type 
+    FROM breed
+    INNER JOIN characteristic 
+    ON breed.characteristic_id = characteristic.id`
+  );
 };
 
 Kitty.findById = id => {
