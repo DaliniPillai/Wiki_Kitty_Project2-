@@ -26,36 +26,38 @@ h3 {
 }
 
  a {
-
-  margin: 0 auto;
-  text-align: center;
+  
   margin: .5em .1em;
   border: 2px solid rgba(240,90,93,0.87);
   vertical-align: middle;
-  font-size: 1rem;
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding: .75rem 1rem;
   color: #fff;
   overflow: hidden;
   display: block;
   transition: border-color 0.3s ease, color 0.5s ease, background-color 0.6s ease, all 0.6s ease;
-   padding: 10px;
+  padding: 10px;
   text-align: center;
   font-size: 20px;
-  /*background: #fff;*/
   cursor: pointer;
   text-decoration: none;
   border-radius: 5%;
+  background: rgba(240,90,93,0.87);
 }
 
 
-
+.kittyLogo {
+  display: block;
+  margin: auto;
+  width: 70%;
+  padding-top: 40%;
+}
 
 a:hover {
   background: rgba(240,90,93,0.87);
 }
+
 
 
 
@@ -64,11 +66,17 @@ a:hover {
 
 h1 {
   text-align: center;
-  font-size: 80px;
+  font-size: 70px;
 }
 .divOne, .divTwo {
-  width: 27%;
+  width: 25%;
   margin: auto;
+}
+.kittyLogo {
+  display: block;
+  margin: auto;
+  width: 40%;
+  padding-top: 20%;
 }
 
 
