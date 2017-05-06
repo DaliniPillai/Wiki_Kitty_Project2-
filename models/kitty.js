@@ -12,7 +12,8 @@ Kitty.findAll = () => {
 };
 
 Kitty.findById = id => {
-  return db.oneOrNone('SELECT * FROM breed WHERE id = $1', [id]);
+  return db.oneOrNone(`SELECT * FROM breed INNER JOIN characteristic 
+  ON breed.characteristic_id = characteristic.id WHERE breed.id = $1;` , [id]);
 };
 
 Kitty.create = kitty => {
