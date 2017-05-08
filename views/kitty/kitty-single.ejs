@@ -1,23 +1,31 @@
 <% include ../partials/boilerplate %>
-<div class='navBar'>
-<ul>
-  <li><a href='/'>Home</a></li>
-  <li><a href='/kitty'>Browse</a></li>
-  <li><a href="/kitty/Add">Add a kitty</a></li>
-</ul>
-</div>
-  <div class='single-kitty'>
-    <h3><%= kitty.breed_name %></h3>
-    <div class='meta'>
-    
-      <span class='imgkitty'><img class='singleKittyimg' src='<%= kitty.img_url %>'></span>
-  
-    <div class='characterType'>
-      <p class='characteristic'><%= kitty.character_type %></p>
-      <div>
-    </div>
-  </div>
 
-  <a class='returnKitty' href='/kitty'>Return to kitty index</a>
+<div class='add'>
+    <a class='addkittylink' href='/kitty'>Return to kitty index</a>
+</div>
+
+<div class='kittyFirst'>
+    <div class='kittyBreed'>
+      <h3><%= kitty.breed_name %></h3>
+      <div class='meta'>
+        <span class='catImgContainer'><img class='catImages'src='<%= kitty.img_url %>'></span>
+        <span class='characteristic'><%= kitty.character_type %></span>
+      </div>
+      <div class='edit'>
+        <a class="buttonKittyLink" href='/kitty/<%= kitty.id %>'>Go to My Page</a>
+        <a class="buttonKittyLink editMe" href='/kitty/edit/<%= kitty.id %>'>Edit Me!</a>
+      </div>
+      <form method='POST' action='/kitty/<%= kitty.id %>?_method=DELETE'>
+      <div class=''>
+        <input class='deleteKitty addkittylink'type='submit' value='Delete your kitty :(' />
+        </div>
+</div>
+      </form>
+</div>
 
 <% include ../partials/end %>
+
+
+
+
+

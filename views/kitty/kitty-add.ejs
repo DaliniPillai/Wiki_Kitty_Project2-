@@ -1,11 +1,4 @@
 <% include ../partials/boilerplate %>
-<div class='navBar'>
-<ul>
-  <li><a href='/'>Home</a></li>
-  <li><a href='/kitty'>Browse</a></li>
-  <li><a href="/kitty/Add">Add a kitty</a></li>
-</ul>
-<div>
 
 <form class="addKittyForm" method='POST' action='/kitty'>
 <h2>Add a kitty to the wiki =^_^=</h2>
@@ -18,7 +11,7 @@
   <input name='img_url' type='text' placeholder='www.imgur.com/cat.jpg' />
 </div>
 <div class="form-group">
-  <label>Choose your cat's personality:</label>
+  <label>Choose your cat's characteristic:</label>
   <select name='characteristic_id'>
     <option value='1'>Affectionate</option>
     <option value='2'>Energetic</option>
