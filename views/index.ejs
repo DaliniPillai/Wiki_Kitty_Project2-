@@ -1,4 +1,11 @@
 <% include ./partials/boilerplate.ejs %>
+<div class='navBar'>
+<ul>
+  <li><a href='/'>Home</a></li>
+  <li><a href='/kitty'>Browse</a></li>
+  <li><a href="/kitty/Add">Add a kitty</a></li>
+</ul>
+</div>
 
 <img class='kittyLogo'src='../static/images/wikiKitty.png' alt='kitty logo'>
 </div>
@@ -8,10 +15,10 @@
 <% if (showMore === true) { %>
 <div class='more'>
 <div class='divOne'>
-<a href='/kitty'>Browse</a> <br>
+<a class='browseKittylink'href='/kitty'>Browse</a> <br>
 </div>
 <div class='divTwo'>
-<a href='/kitty/Add'>Add a kitty!</a>
+<a class='addkittylink'href='/kitty/Add'>Add a kitty!</a>
 </div>
 </div>
 <% } %>

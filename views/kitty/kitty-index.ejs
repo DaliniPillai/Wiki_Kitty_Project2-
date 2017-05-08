@@ -1,6 +1,16 @@
 <% include ../partials/boilerplate %>
+<div class='navBar'>
+<ul>
+  <li><a href='/'>Home</a></li>
+  <li><a href='/kitty'>Browse</a></li>
+  <li><a href="/kitty/Add">Add a kitty</a></li>
+</ul>
+</div>
 
-<a href='/kitty/add'>Add a Kitty!</a>
+<div class='add'>
+
+<a class ='addkittylink' href='/kitty/add'>Add a Kitty!</a>
+</div>
 
 <div class='kittyFirst'>
   <% kittyData.forEach(function(kitty) { %>
@@ -10,12 +20,17 @@
         <span class='img'><img class='catImages'src='<%= kitty.img_url %>'></span>
         <span class='characteristic'><%= kitty.character_type %></span>
       </div>
+      <div class='edit'>
       <a href='/kitty/<%= kitty.id %>'>Go to page</a>
       <a href='/kitty/edit/<%= kitty.id %>'>Edit Kitty</a>
+      </div>
       <form method='POST' action='/kitty/<%= kitty.id %>?_method=DELETE'>
-        <input type='submit' value='Delete your kitty :(' />
+      <div class=''>
+        <input class='deleteKitty addkittylink'type='submit' value='Delete your kitty :(' />
+        </div>
+</div>
       </form>
-    </div>
+    
   <% }) %>
 </div>
 

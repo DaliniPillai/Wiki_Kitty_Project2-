@@ -1,13 +1,23 @@
 <% include ../partials/boilerplate %>
-
+<div class='navBar'>
+<ul>
+  <li><a href='/'>Home</a></li>
+  <li><a href='/kitty'>Browse</a></li>
+  <li><a href="/kitty/Add">Add a kitty</a></li>
+</ul>
+</div>
   <div class='single-kitty'>
     <h3><%= kitty.breed_name %></h3>
     <div class='meta'>
-      <span class='img'><img src='<%= kitty.img_url %>'></span>
+    
+      <span class='imgkitty'><img class='singleKittyimg' src='<%= kitty.img_url %>'></span>
+  
+    <div class='characterType'>
       <p class='characteristic'><%= kitty.character_type %></p>
+      <div>
     </div>
   </div>
 
-  <a href='/kitty'>Return to kitty index</a>
+  <a class='returnKitty' href='/kitty'>Return to kitty index</a>
 
 <% include ../partials/end %>
